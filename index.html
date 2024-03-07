@@ -16,7 +16,7 @@
     <title>deforyum, deforyou, deforuim, deforum-ui</title>
 </head>
 
-<body class="bg-black">
+<body class="bg-black home">
 
     <header>
         <canvas id="noiseCanvas" data-color="black"></canvas>
@@ -33,7 +33,10 @@
         </div>
     </header>
 
-<section id="under-construction" class="container">
+<section id="under-construction" class="container-fluid text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col">
     Stable Diffusion Checkpoint Selector<br>
  <select name="checkpoint SD model" id="checkpoint SD model">
     <option value="Jugg">Jugg</option>
@@ -41,6 +44,15 @@
     <option value="safetensor">safetensor</option>
     <option value="safetensor">safetensor</option>
   </select>
+</div>
+<div class="col">
+    <p>
+        Model Repositories<br>
+    <a href="#">HuggingFace</a> | <a href="#">CivitAI</a>
+    </p>
+</div>
+</div>
+</div>
     <div class="row">
         <div class="col">
             <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -68,19 +80,41 @@
 </ul>
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane fade show active" id="Run-tab-pane" role="tabpanel" aria-labelledby="Run-tab" tabindex="0">
+
+<div class="row">
+    <div class="col">
 <select class="form-select" aria-label="Sample">
   <option selected>Select Sampler</option>
   <option value="1">DPN++ SDE</option>
   <option value="2">Euler</option>
   <option value="3">Euler a</option>
 </select>
+    </div>
+    <div class="col">
+<label for="stepsset" class="form-label">Steps</label>
+<input type="range" class="form-range" id="stepsset">
+    </div>
+</div>
+
 <label for="widthset" class="form-label">Width</label>
 <input type="range" class="form-range" id="widthset">
 <label for="heightset" class="form-label">Height</label>
 <input type="range" class="form-range" id="heightset">
 
   </div>
-  <div class="tab-pane fade" id="Keyframes-tab-pane" role="tabpanel" aria-labelledby="Keyframes-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="Keyframes-tab-pane" role="tabpanel" aria-labelledby="Keyframes-tab" tabindex="0">
+    <div class="row text-start">
+<div class="col-9">
+
+Animation mode
+</div>
+<div class="col-3">
+
+Border mode
+</div>
+
+</div>
+  </div>
   <div class="tab-pane fade" id="Prompts-tab-pane" role="tabpanel" aria-labelledby="Prompts-tab" tabindex="0">...</div>
   <div class="tab-pane fade" id="Init-tab-pane" role="tabpanel" aria-labelledby="Init-tab" tabindex="0">...</div>
   <div class="tab-pane fade" id="ControlNet-tab-pane" role="tabpanel" aria-labelledby="ControlNet-tab" tabindex="0">...</div>
