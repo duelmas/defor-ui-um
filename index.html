@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-    <script type="text/javascript" src="https://deforum.art/scripts/scripts.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,17 +12,16 @@
         rel="stylesheet">
     <link rel="stylesheet" href="https://deforum.art/styles/small.css">
     <link rel="stylesheet" href="https://deforum.art/styles/styles/large.css" media="screen and (min-width: 1024px)">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 
-    <link rel="manifest" href="https://deforum.art/assets/icon/site.webmanifest">
     <title>deforyum, deforyou, deforuim, deforum-ui</title>
 </head>
 
 <body class="home">
 
     <header>
-        <canvas id="noiseCanvas" data-color="black"></canvas>
-        <script src="https://deforum.art/scripts/grid.js"></script>
-
+<canvas id="noiseCanvas" data-color="black"></canvas>
+    <script src="https://deforum.art/scripts/grid.js"></script>
         <div id="logo">
             <a href="https://deforum.art/">{d}</a>
         </div>
@@ -32,12 +30,72 @@
     <p>free deforum open source ui - free from 1111+forge extentions - stand-alone / ui project</p>
             <a class="btn-atn2" href="https://github.com/duelmas/defor-ui-um">GitHub (defor-ui-um)</a>
             <div id="btn-scrolldown">
-                <a href="#home-info"><img src="https://deforum.art/assets/down-arrow.svg"></a>
+                <a href="#under-construction"><img src="https://deforum.art/assets/down-arrow.svg"></a>
             </div>
         </div>
     </header>
 
-<section id="home-info">
+<section id="under-construction" class="container">
+    Stable Diffusion Checkpoint Selector<br>
+ <select name="checkpoint SD model" id="checkpoint SD model">
+    <option value="Jugg">Jugg</option>
+    <option value="Custom">Custom</option>
+    <option value="safetensor">safetensor</option>
+    <option value="safetensor">safetensor</option>
+  </select>
+    <div class="row">
+        <div class="col">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="Run-tab" data-bs-toggle="tab" data-bs-target="#Run-tab-pane" type="button" role="tab" aria-controls="Run-tab-pane" aria-selected="true">Run</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Keyframes-tab" data-bs-toggle="tab" data-bs-target="#Keyframes-tab-pane" type="button" role="tab" aria-controls="Keyframes-tab-pane" aria-selected="false">Keyframes</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Prompts-tab" data-bs-toggle="tab" data-bs-target="#Prompts-tab-pane" type="button" role="tab" aria-controls="Prompts-tab-pane" aria-selected="false">Prompts</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Init-tab" data-bs-toggle="tab" data-bs-target="#Init-tab-pane" type="button" role="tab" aria-controls="Init-tab-pane" aria-selected="false">Init</button>
+  </li>
+    <li class="nav-item" role="presentation">
+    <button class="nav-link" id="ControlNet-tab" data-bs-toggle="tab" data-bs-target="#ControlNet-tab-pane" type="button" role="tab" aria-controls="ControlNet-tab-pane" aria-selected="false">ControlNet</button>
+  </li>
+    <li class="nav-item" role="presentation">
+    <button class="nav-link" id="HybridVideo-tab" data-bs-toggle="tab" data-bs-target="#HybridVideo-tab-pane" type="button" role="tab" aria-controls="HybridVideo-tab-pane" aria-selected="false">Hybrid Video</button>
+  </li>
+    <li class="nav-item" role="presentation">
+    <button class="nav-link" id="Output-tab" data-bs-toggle="tab" data-bs-target="#Output-tab-pane" type="button" role="tab" aria-controls="Output-tab-pane" aria-selected="false">Output</button>
+  </li>
+</ul>
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="Run-tab-pane" role="tabpanel" aria-labelledby="Run-tab" tabindex="0">
+<select class="form-select" aria-label="Sample">
+  <option selected>Select Sampler</option>
+  <option value="1">DPN++ SDE</option>
+  <option value="2">Euler</option>
+  <option value="3">Euler a</option>
+</select>
+<label for="widthset" class="form-label">Width</label>
+<input type="range" class="form-range" id="widthset">
+<label for="heightset" class="form-label">Height</label>
+<input type="range" class="form-range" id="heightset">
+
+  </div>
+  <div class="tab-pane fade" id="Keyframes-tab-pane" role="tabpanel" aria-labelledby="Keyframes-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="Prompts-tab-pane" role="tabpanel" aria-labelledby="Prompts-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="Init-tab-pane" role="tabpanel" aria-labelledby="Init-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="ControlNet-tab-pane" role="tabpanel" aria-labelledby="ControlNet-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="HybridVideo-tab-pane" role="tabpanel" aria-labelledby="HybridVideo-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="Output-tab-pane" role="tabpanel" aria-labelledby="Output-tab" tabindex="0">...</div>
+</div>
+</div>
+<div class="col">
+    <button class="btn btn-xl btn-dark">Interrupt</button> | <button class="btn btn-xl btn-light">Generate</button> 
+</div>
+</div>
+
+<br>
 
 front-end code goes copy paste in here from the 1111/forge extensions tab
 
@@ -64,6 +122,7 @@ front-end code goes copy paste in here from the 1111/forge extensions tab
             &copy; 2024 deforum llc
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
