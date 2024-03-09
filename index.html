@@ -33,7 +33,7 @@
         </div>
     </header>
 
-<section id="under-construction" class="container-fluid text-center">
+<section id="under-construction" class="container-fluid text-center btn-atn2">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -90,16 +90,28 @@
   <option value="3">Euler a</option>
 </select>
     </div>
-    <div class="col">
-<label for="stepsset" class="form-label">Steps</label>
-<input type="range" class="form-range" id="stepsset">
+<div class="col">
+    <label for="stepsset" class="form-label">Steps</label>
+    <input type="range" class="form-control-range" id="stepsRange" min="0" max="200" oninput="stepsOutput.value = stepsRange.value; stepsNumber.value = stepsRange.value;">
+    <output name="stepsOutput" id="stepsOutput">0</output>
+    <input type="number" class="form-control" id="stepsNumber" min="0" max="200" oninput="stepsRange.value = stepsNumber.value; stepsOutput.value = stepsNumber.value;">
     </div>
 </div>
-
+<div class="row">
+    <div class="col">
 <label for="widthset" class="form-label">Width</label>
-<input type="range" class="form-range" id="widthset">
+<input type="range" class="form-control-range" id="widthRange" min="0" max="2048" oninput="widthOutput.value = widthRange.value; widthNumber.value = widthRange.value;">
+<output name="widthOutput" id="widthOutput">0</output>
+<input type="number" class="form-control" id="widthNumber" min="0" max="2048" oninput="widthRange.value = widthNumber.value; widthOutput.value = widthNumber.value;">
+</div>
+    <div class="col">
 <label for="heightset" class="form-label">Height</label>
-<input type="range" class="form-range" id="heightset">
+<input type="range" class="form-control-range" id="heightRange" min="0" max="2048" oninput="heightOutput.value = heightRange.value; heightNumber.value = heightRange.value;">
+<output name="heightOutput" id="heightOutput">0</output>
+<input type="number" class="form-control" id="heightNumber" min="0" max="2048" oninput="heightRange.value = heightNumber.value; heightOutput.value = heightNumber.value;">
+</div>
+</div>
+
 
   </div>
   <div class="tab-pane fade" id="Keyframes-tab-pane" role="tabpanel" aria-labelledby="Keyframes-tab" tabindex="0">
@@ -115,7 +127,14 @@ Border mode
 
 </div>
   </div>
-  <div class="tab-pane fade" id="Prompts-tab-pane" role="tabpanel" aria-labelledby="Prompts-tab" tabindex="0">...</div>
+  <div class="tab-pane fade" id="Prompts-tab-pane" role="tabpanel" aria-labelledby="Prompts-tab" tabindex="0">
+<div class="card">
+  <label for="prompt_pro" class="form-label">Prompts<br>
+    <small>you know what to do</small></label>
+  <textarea class="form-control" id="prompt_pro" rows="3" placeholder="prompt it"></textarea>
+</div>
+
+  </div>
   <div class="tab-pane fade" id="Init-tab-pane" role="tabpanel" aria-labelledby="Init-tab" tabindex="0">...</div>
   <div class="tab-pane fade" id="ControlNet-tab-pane" role="tabpanel" aria-labelledby="ControlNet-tab" tabindex="0">...</div>
   <div class="tab-pane fade" id="HybridVideo-tab-pane" role="tabpanel" aria-labelledby="HybridVideo-tab" tabindex="0">...</div>
@@ -123,13 +142,15 @@ Border mode
 </div>
 </div>
 <div class="col">
-    <button class="btn btn-lg btn-dark">Interrupt</button> | <button class="btn btn-lg btn-light">Generate</button> 
+    <div class="btn-atn2">
+    <button class="btn btn-lg btn-dark">Interrupt</button> | <button class="btn btn-lg btn-light">Generate</button>
+    </div>
 </div>
 </div>
 
 <br>
 
-front-end code goes copy paste in here from the 1111/forge extensions tab
+front-end code with bootstrap 5.3
 
 </section>
 
