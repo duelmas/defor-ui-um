@@ -12,3 +12,98 @@ header, section {
     background-color: lime;
     color: black;
 }
+
+.video-container {
+        position: relative;
+        padding-bottom: 56.25%;
+        padding-top: 30px;
+        height: 0;
+        overflow: hidden;
+}
+
+.video-player {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+}
+
+.video-controls {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #333;
+        color: #fff;
+        margin-left: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.play-button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+
+.play-button:hover {
+        background-color: #333;
+        color: #fff;
+}
+
+.pause-button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+
+.pause-button:hover {
+        background-color: #fff;
+        color: #333;
+}
+
+.fullscreen-button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+
+.fullscreen-button:hover {
+        background-color: #333;
+        color: #fff;
+}
+
+.volume-button {
+        background-color: #333;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+}
+
+.volume-button:hover {
+        background-color: #fff;
+        color: #333;
+}
+
+.video-background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+        object-fit: cover;
+}
